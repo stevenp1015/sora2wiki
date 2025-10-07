@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useRef } from "react";
 import { useLayoutContext } from "./LayoutContext";
-import { VerticalThemeWipeToggle } from "../../lib/ui/vertical-theme-wipe-toggle";
+import ThemeControls from "./ThemeControls";
 
 const Header: React.FC = () => {
   const { searchTerm, setSearchTerm, activeSection } = useLayoutContext();
@@ -47,9 +47,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-4 items-center">
-        <VerticalThemeWipeToggle direction="top" />
-      </div>
+      <ThemeControls />
       <div className="wiki-header__meta">
         {activeSection && (
           <div className="wiki-header__active">

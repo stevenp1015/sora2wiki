@@ -4,6 +4,33 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var themeKey = "sora2wiki.themeId";
+          var modeKey = "sora2wiki.themeMode";
+          var root = document.documentElement;
+          var storedTheme = localStorage.getItem(themeKey) || "atlas";
+          var storedMode = localStorage.getItem(modeKey);
+          var mode =
+            storedMode === "dark" || storedMode === "light"
+              ? storedMode
+              : window.matchMedia &&
+                  window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          root.dataset.theme = storedTheme;
+          root.style.colorScheme = mode;
+          if (mode === "dark") {
+            root.classList.add("dark");
+          } else {
+            root.classList.remove("dark");
+          }
+        } catch (error) {
+          console.warn("Theme bootstrap failed", error);
+        }
+      })();
+    </script>
     <title>Vite + React + TS</title>
   </head>
   <body>

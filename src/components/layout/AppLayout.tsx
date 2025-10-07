@@ -1,6 +1,5 @@
 import React, { useMemo, useState } from "react";
 import { Outlet } from "react-router-dom";
-import ReadingProgress from "../ReadingProgress";
 import ScrollToTop from "../ScrollToTop";
 import Header from "./Header";
 import SidebarNav from "./SidebarNav";
@@ -34,7 +33,6 @@ const AppLayout: React.FC<AppLayoutProps> = ({ sections }) => {
   return (
     <LayoutContext.Provider value={contextValue}>
       <div className="wiki-shell">
-        <ReadingProgress />
         <ScrollToTop />
         <Header />
         <div className="wiki-body">

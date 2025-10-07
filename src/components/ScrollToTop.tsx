@@ -1,17 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 const ScrollToTop: React.FC = () => {
-  const [visible, setVisible] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      setVisible(window.scrollY > 400);
+    const button = buttonRef.current;
+    if (!button) return;
+
+    let ticking = false;
+
+    const update = () => {
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+      button.dataset.visible = progress > 18 ? "true" : "false";
+      button.style.setProperty("--scroll-progress", progress.toFixed(2));
+      ticking = false;
     };
 
-    window.addEventListener("scroll", toggleVisibility, { passive: true });
-    toggleVisibility();
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
 
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    update();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -23,38 +42,9 @@ const ScrollToTop: React.FC = () => {
 
   return (
     <button
+      ref={buttonRef}
       onClick={scrollToTop}
       className="scroll-to-top"
-      style={{
-        position: "fixed",
-        bottom: "2.5rem",
-        right: "2.5rem",
-        width: "48px",
-        height: "48px",
-        borderRadius: "50%",
-        border: "1px solid var(--accent)",
-        background: "var(--surface)",
-        backdropFilter: "brightness(150)",
-        color: "var(--accent)",
-        fontSize: "20px",
-        cursor: "pointer",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: 10,
-        opacity: visible ? 1 : 0,
-        transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
-        boxShadow: visible ? "0 0px 5px -8px rgba(124, 92, 255, 0.5)" : "none",
-        pointerEvents: visible ? "auto" : "none",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.transform = "scale(1.1)";
-        e.currentTarget.style.boxShadow = "0 0px 5px 1px var(--accent)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = "scale(1)";
-        e.currentTarget.style.boxShadow = "0 0px 5px 0px var(--accent)";
-      }}
       aria-label="Scroll to top"
     >
       ↑

@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useRef, useCallback } from "react";
 import { flushSync } from "react-dom";
 import { Moon, Sun } from "lucide-react";
-import { motion, AnimatePresence, scale } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "../utils";
+import { useThemeContext } from "../theme/ThemeContext";
 
 type VerticalDirection = "top" | "bottom";
 
@@ -18,35 +19,27 @@ export const VerticalThemeWipeToggle = ({
   direction = "top",
 }: VerticalThemeWipeToggleProps) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const [darkMode, setDarkMode] = useState(() =>
-    typeof window !== "undefined"
-      ? document.documentElement.classList.contains("dark")
-      : false,
-  );
-
-  useEffect(() => {
-    const syncTheme = () =>
-      setDarkMode(document.documentElement.classList.contains("dark"));
-
-    const observer = new MutationObserver(syncTheme);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-    return () => observer.disconnect();
-  }, []);
+  const { mode, setMode } = useThemeContext();
+  const darkMode = mode === "dark";
 
   const onToggle = useCallback(async () => {
     if (!buttonRef.current) return;
 
-    await document.startViewTransition(() => {
-      flushSync(() => {
-        const toggled = !darkMode;
-        setDarkMode(toggled);
-        document.documentElement.classList.toggle("dark", toggled);
-        localStorage.setItem("theme", toggled ? "dark" : "light");
-      });
-    }).ready;
+    const nextMode = darkMode ? "light" : "dark";
+    const startTransition: (callback: () => void) => {
+      ready: Promise<void>;
+    } = (document as any).startViewTransition
+      ? (document as any).startViewTransition.bind(document)
+      : (callback: () => void) => {
+          callback();
+          return { ready: Promise.resolve() };
+        };
+
+    const transition = startTransition(() => {
+      flushSync(() => setMode(nextMode));
+    });
+
+    await transition.ready;
 
     if (direction === "top") {
       // Top-to-bottom animation
@@ -89,7 +82,7 @@ export const VerticalThemeWipeToggle = ({
         pseudoElement: "::view-transition-old(root)",
       },
     );
-  }, [darkMode, direction]);
+  }, [darkMode, direction, setMode]);
 
   return (
     <button
