@@ -1,26 +1,48 @@
-import React, { useMemo } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import React, { useMemo, useState } from "react";
+import { NavLink, useParams } from "react-router-dom";
 import { useLayoutContext } from "./LayoutContext";
+import type { GuidePage, GuideSection } from "../../lib/sections";
 
-const filterSections = (term: string, title: string, summary: string) => {
-  if (!term.trim()) return true;
+const filterItems = (
+  term: string,
+  sections: GuideSection[],
+): GuideSection[] => {
+  if (!term.trim()) return sections;
+
   const lowered = term.toLowerCase();
-  return (
-    title.toLowerCase().includes(lowered) ||
-    summary.toLowerCase().includes(lowered)
-  );
+
+  return sections
+    .map((section) => {
+      const matchingPages = section.pages.filter(
+        (page) =>
+          page.title.toLowerCase().includes(lowered) ||
+          page.summary.toLowerCase().includes(lowered),
+      );
+
+      if (matchingPages.length > 0) {
+        return { ...section, pages: matchingPages };
+      }
+      return null;
+    })
+    .filter((section): section is GuideSection => section !== null);
 };
 
 const SidebarNav: React.FC = () => {
   const { sections, searchTerm } = useLayoutContext();
-  const location = useLocation();
+  const { sectionId: activeSectionId } = useParams<{ sectionId: string }>();
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
+
+  const toggleSection = (sectionId: string) => {
+    setOpenSections((prev) => ({ ...prev, [sectionId]: !prev[sectionId] }));
+  };
+
+  const isSectionOpen = (section: GuideSection) => {
+    return openSections[section.id] || activeSectionId === section.id;
+  };
 
   const filteredSections = useMemo(
-    () =>
-      sections.filter((section) =>
-        filterSections(searchTerm, section.title, section.summary),
-      ),
-    [sections, searchTerm],
+    () => filterItems(searchTerm, sections),
+    [searchTerm, sections],
   );
 
   return (
@@ -37,30 +59,39 @@ const SidebarNav: React.FC = () => {
             <ul>
               {filteredSections.map((section) => {
                 const isRoot = section.id === sections[0]?.id;
-                const path = isRoot ? "/" : `/guide/${section.id}`;
+                const path = isRoot ? "/" : `/guide/${section.id}/${section.pages[0].id}`;
+
                 return (
-                  <li key={section.id}>
-                    <NavLink
-                      to={path}
-                      end={isRoot}
-                      className={({ isActive }) =>
-                        [
-                          "wiki-sidebar__link",
-                          isActive || location.pathname === path
-                            ? "wiki-sidebar__link--active"
-                            : "",
-                        ]
-                          .filter(Boolean)
-                          .join(" ")
-                      }
+                  <li key={section.id} className="wiki-sidebar__section">
+                    <div
+                      className="wiki-sidebar__section-header"
+                      onClick={() => toggleSection(section.id)}
                     >
-                      <span className="wiki-sidebar__link-title">
+                      <NavLink to={path} end={isRoot}>
                         {section.title}
-                      </span>
-                      <span className="wiki-sidebar__link-summary">
-                        {section.summary}
-                      </span>
-                    </NavLink>
+                      </NavLink>
+                    </div>
+                    {isSectionOpen(section) && (
+                      <ul className="wiki-sidebar__page-list">
+                        {section.pages.map((page) => (
+                          <li key={page.id}>
+                            <NavLink
+                              to={`/guide/${section.id}/${page.id}`}
+                              className={({ isActive }) =>
+                                `wiki-sidebar__link ${isActive ? "wiki-sidebar__link--active" : ""}`
+                              }
+                            >
+                              <span className="wiki-sidebar__link-title">
+                                {page.title}
+                              </span>
+                              <span className="wiki-sidebar__link-summary">
+                                {page.summary}
+                              </span>
+                            </NavLink>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </li>
                 );
               })}

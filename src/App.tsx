@@ -12,6 +12,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <GuideSectionPage /> },
       { path: "guide/:sectionId", element: <GuideSectionPage /> },
+      { path: "guide/:sectionId/:pageId", element: <GuideSectionPage /> },
     ],
   },
 ]);

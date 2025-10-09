@@ -1,4 +1,4 @@
-import rawSections from "./guideContent.json";
+import rawSections from "./wiki-content.json";
 
 export type SectionHeading = {
   id: string;
@@ -6,14 +6,20 @@ export type SectionHeading = {
   text: string;
 };
 
-export type GuideSection = {
+export type GuidePage = {
   id: string;
   title: string;
-  fullTitle?: string;
   content: string;
   summary: string;
   readingTimeMinutes: number;
   headings: SectionHeading[];
+};
+
+export type GuideSection = {
+  id: string;
+  title: string;
+  fullTitle?: string;
+  pages: GuidePage[];
 };
 
 const slugify = (value: string) =>
@@ -43,7 +49,7 @@ const extractHeadings = (content: string): SectionHeading[] => {
   const headings: SectionHeading[] = [];
 
   for (const line of lines) {
-    const headingMatch = /^(#{1,3})\s+(.*)/.exec(line.trim());
+    const headingMatch = /^(#{2,3})\s+(.*)/.exec(line.trim());
     if (!headingMatch) continue;
 
     const [, hashes, headingText] = headingMatch;
@@ -57,15 +63,22 @@ const extractHeadings = (content: string): SectionHeading[] => {
 };
 
 const sections: GuideSection[] = rawSections.map((section) => {
-  const fullTitle = section.full_title ?? section.fullTitle;
+  const fullTitle = section.fullTitle;
+
+  const pages: GuidePage[] = section.pages.map((page) => ({
+    id: page.id,
+    title: page.title,
+    content: page.content,
+    summary: createSummary(page.content),
+    readingTimeMinutes: estimateReadingTime(page.content),
+    headings: extractHeadings(page.content),
+  }));
+
   return {
     id: section.id,
     title: section.title,
     fullTitle: fullTitle && fullTitle.trim().length > 0 ? fullTitle : undefined,
-    content: section.content,
-    summary: createSummary(section.content),
-    readingTimeMinutes: estimateReadingTime(section.content),
-    headings: extractHeadings(section.content),
+    pages,
   };
 });
 
