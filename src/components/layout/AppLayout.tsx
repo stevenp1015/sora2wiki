@@ -32,12 +32,12 @@ const AppLayout: React.FC<AppLayoutProps> = ({ sections }) => {
 
   return (
     <LayoutContext.Provider value={contextValue}>
-      <div className="wiki-shell">
+      <div className="wiki-shell ">
         <ScrollToTop />
         <Header />
         <div className="wiki-body">
           <SidebarNav />
-          <div className="wiki-content">
+          <div className="wiki-content" data-scroll-container="true">
             <Outlet />
           </div>
         </div>

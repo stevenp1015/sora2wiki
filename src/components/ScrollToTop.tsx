@@ -1,20 +1,33 @@
 import React, { useEffect, useRef } from "react";
+import { getScrollContainer } from "../lib/utils";
 
 const ScrollToTop: React.FC = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const scrollContainerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const button = buttonRef.current;
     if (!button) return;
 
+    scrollContainerRef.current = getScrollContainer();
+
     let ticking = false;
 
     const update = () => {
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
-      button.dataset.visible = progress > 18 ? "true" : "false";
-      button.style.setProperty("--scroll-progress", progress.toFixed(2));
+      const container = scrollContainerRef.current;
+      if (container) {
+        const docHeight = container.scrollHeight - container.clientHeight;
+        const progress =
+          docHeight > 0 ? (container.scrollTop / docHeight) * 100 : 0;
+        button.dataset.visible = progress > 18 ? "true" : "false";
+        button.style.setProperty("--scroll-progress", progress.toFixed(2));
+      } else {
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+        button.dataset.visible = progress > 18 ? "true" : "false";
+        button.style.setProperty("--scroll-progress", progress.toFixed(2));
+      }
       ticking = false;
     };
 
@@ -26,18 +39,28 @@ const ScrollToTop: React.FC = () => {
     };
 
     update();
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    const target: HTMLElement | Window =
+      scrollContainerRef.current ?? window;
+    target.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      target.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (

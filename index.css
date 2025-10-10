@@ -1,6 +1,91 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 @import "tailwindcss";
 
+/* ============================== */
+/* Fonts                          */
+/* ============================== */
+@font-face {
+    font-family: "iSans";
+    src: url("src/lib/ui/iSans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iSans";
+    src: url("src/lib/ui/iSans-BoldItalic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iSans";
+    src: url("src/lib/ui/iSans-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iSans";
+    src: url("src/lib/ui/iSans-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iSans";
+    src: url("src/lib/ui/iSans-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iSans";
+    src: url("src/lib/ui/iSans-MediumItalic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iSans";
+    src: url("src/lib/ui/iSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iSans";
+    src: url("src/lib/ui/iSans-RegularItalic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iSans";
+    src: url("src/lib/ui/iSans-Semibold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iSans";
+    src: url("src/lib/ui/iSans-SemiboldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ============================== */
+/* Theme Tokens                   */
+/* ============================== */
 :root {
     color-scheme: light;
     --background: #fafbfc;
@@ -575,58 +660,20 @@ html.dark[data-theme="ocean"] {
     --glow: #5cc4f0;
 }
 
-/*****************************
-
-/* CSS HEX
---white: #FFFFFFff;
---citron: #DCCA56ff;
---seasalt: #FAFAFAff;
---black: #020100ff;
---yinmn-blue: #12528Eff;
-
-/* CSS HSL
---white: hsla(0, 0%, 100%, 1);
---citron: hsla(52, 66%, 60%, 1);
---seasalt: hsla(0, 0%, 98%, 1);
---black: hsla(30, 100%, 0%, 1);
---yinmn-blue: hsla(209, 78%, 31%, 1);
-
-/* SCSS HEX
-$white: #FFFFFFff;
-$citron: #DCCA56ff;
-$seasalt: #FAFAFAff;
-$black: #020100ff;
-$yinmn-blue: #12528Eff;
-
-/* SCSS HSL
-$white: hsla(0, 0%, 100%, 1);
-$citron: hsla(52, 66%, 60%, 1);
-$seasalt: hsla(0, 0%, 98%, 1);
-$black: hsla(30, 100%, 0%, 1);
-$yinmn-blue: hsla(209, 78%, 31%, 1);
-
-/* SCSS RGB
-$white: rgba(255, 255, 255, 1);
-$citron: rgba(220, 202, 86, 1);
-$seasalt: rgba(250, 250, 250, 1);
-$black: rgba(2, 1, 0, 1);
-$yinmn-blue: rgba(18, 82, 142, 1);
-
-/* SCSS Gradient
-$gradient-top: linear-gradient(0deg, #FFFFFFff, #DCCA56ff, #FAFAFAff, #020100ff, #12528Eff);
-$gradient-right: linear-gradient(90deg, #FFFFFFff, #DCCA56ff, #FAFAFAff, #020100ff, #12528Eff);
-$gradient-bottom: linear-gradient(180deg, #FFFFFFff, #DCCA56ff, #FAFAFAff, #020100ff, #12528Eff);
-$gradient-left: linear-gradient(270deg, #FFFFFFff, #DCCA56ff, #FAFAFAff, #020100ff, #12528Eff);
-$gradient-top-right: linear-gradient(45deg, #FFFFFFff, #DCCA56ff, #FAFAFAff, #020100ff, #12528Eff);
-$gradient-bottom-right: linear-gradient(135deg, #FFFFFFff, #DCCA56ff, #FAFAFAff, #020100ff, #12528Eff);
-$gradient-top-left: linear-gradient(225deg, #FFFFFFff, #DCCA56ff, #FAFAFAff, #020100ff, #12528Eff);
-$gradient-bottom-left: linear-gradient(315deg, #FFFFFFff, #DCCA56ff, #FAFAFAff, #020100ff, #12528Eff);
-$gradient-radial: radial-gradient(#FFFFFFff, #DCCA56ff, #FAFAFAff, #020100ff, #12528Eff);
-
-******************************/
-
+/* ============================== */
+/* Base Resets                    */
+/* ============================== */
 * {
     box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
 }
 
 body {
@@ -639,8 +686,9 @@ body {
         sans-serif;
     background: var(--background);
     color: var(--text-primary);
-    min-height: 100vh;
-    overflow-x: hidden;
+    min-height: 100%;
+    overflow: hidden;
+    overscroll-behavior-y: none;
 }
 
 a {
@@ -670,25 +718,33 @@ kbd {
     justify-content: center;
     min-width: 26px;
     padding: 2px 6px;
+    font-family: "iSans", sans-serif;
     font-size: 12px;
-    font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
     color: var(--text-subtle);
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 6px;
 }
 
+/* ============================== */
+/* Layout Shell                   */
+/* ============================== */
 .wiki-shell {
     position: relative;
+    height: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .theme-outline {
     outline: 2px solid var(--accent);
 }
 
+/* ============================== */
+/* Header                         */
+/* ============================== */
 .wiki-header {
     position: sticky;
     top: 0;
@@ -703,17 +759,6 @@ kbd {
     animation: slideInDown 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes slideInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .wiki-header__brand {
     display: flex;
     align-items: center;
@@ -724,17 +769,17 @@ kbd {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
-    font-size: 24px;
-    border-radius: 14px;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    border-radius: var(--radius-md);
     background: radial-gradient(
         circle at 30% 30%,
         var(--accent),
         var(--accent-soft)
     );
     color: var(--text-primary);
-    box-shadow: 0 0 0 1px var(--accent-soft);
+    box-shadow: 0 0 0 3px var(--accent-soft);
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
 }
@@ -747,6 +792,7 @@ kbd {
 }
 
 .wiki-header__title {
+    font-family: "iSans", sans-serif;
     font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -755,6 +801,7 @@ kbd {
 }
 
 .wiki-header__subtitle {
+    font-family: "iSans", sans-serif;
     font-size: 0.85rem;
     color: var(--surface);
     letter-spacing: 0.02em;
@@ -773,6 +820,7 @@ kbd {
     gap: 0.75rem;
 }
 
+/* Theme Picker */
 .theme-picker {
     position: relative;
 }
@@ -782,10 +830,11 @@ kbd {
     align-items: center;
     gap: 0.55rem;
     padding: 0.55rem 0.85rem;
-    border-radius: var(--radius-);
+    border-radius: var(--radius-md);
     border: 1px solid var(--border);
     background: var(--surface);
     color: var(--text-secondary);
+    font-family: "iSans", sans-serif;
     font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 0.01em;
@@ -817,6 +866,7 @@ kbd {
     border-radius: 999px;
     background: rgba(0, 0, 0, 0.06);
     color: var(--text-subtle);
+    font-family: "iSans", sans-serif;
     font-size: 0.65rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -866,6 +916,7 @@ kbd {
     border: 1px solid transparent;
     background: transparent;
     color: var(--text-secondary);
+    font-family: "iSans", sans-serif;
     font-size: 0.82rem;
     text-align: left;
     transition:
@@ -927,6 +978,7 @@ kbd {
 }
 
 .theme-picker__option-description {
+    font-family: "iSans", sans-serif;
     font-size: 0.72rem;
     color: var(--text-subtle);
     letter-spacing: 0.01em;
@@ -970,6 +1022,7 @@ kbd {
     border: 1px solid var(--border-strong);
     background: var(--surface);
     color: var(--accent);
+    font-family: "iSans", sans-serif;
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -1011,6 +1064,7 @@ kbd {
 }
 
 .wiki-header__active-label {
+    font-family: "iSans", sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -1018,12 +1072,14 @@ kbd {
 }
 
 .wiki-header__active-title {
+    font-family: "iSans", sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--glow);
 }
 
 .wiki-header__active-time {
+    font-family: "iSans", sans-serif;
     font-size: 0.75rem;
     color: var(--text-subtle);
 }
@@ -1071,27 +1127,34 @@ kbd {
 .wiki-body {
     display: grid;
     grid-template-columns: minmax(280px, 320px) minmax(0, 1fr);
+    grid-template-rows: 1fr;
     gap: 0;
     flex: 1;
+    height: 100%;
+    min-height: 0;
     padding: 1.618rem 2.618rem 4.618rem;
 }
 
+/* Sidebar */
 .wiki-sidebar {
-    position: sticky;
-    top: 110px;
-    height: calc(100vh - 140px);
-    padding-right: 2.618rem;
+    height: 100%;
+    min-height: 0;
+    padding-right: 1.618rem;
     padding-bottom: 3.618rem;
     overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 .wiki-sidebar::-webkit-scrollbar {
-    width: 3.618px;
+    width: 2.618px;
+    overflow: auto;
+    background-color: transparent;
 }
 
 .wiki-sidebar::-webkit-scrollbar-thumb {
     background: var(--accent-soft);
     border-radius: 999px;
+    overflow: auto;
 }
 
 .wiki-sidebar__inner {
@@ -1116,6 +1179,7 @@ kbd {
 
 .wiki-sidebar__lead {
     margin: 0 0 1rem;
+    font-family: "iSans", sans-serif;
     font-size: 0.9rem;
     color: var(--text-secondary);
     line-height: 1.5;
@@ -1127,10 +1191,11 @@ kbd {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 1rem;
 }
 
 .wiki-sidebar__empty {
+    font-family: "iSans", sans-serif;
     font-size: 0.85rem;
     color: var(--text-subtle);
     padding: 0.6rem 0;
@@ -1138,7 +1203,7 @@ kbd {
 
 .wiki-sidebar__link {
     display: block;
-    padding: 0.6v18rem 1rem;
+    padding: 0.618rem 1rem;
     border-radius: 0.618rem;
     background: var(--surface);
     border: 1px solid var(--border);
@@ -1184,6 +1249,7 @@ kbd {
 
 .wiki-sidebar__link-title {
     display: block;
+    font-family: "iSans", sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 0.4rem;
@@ -1191,6 +1257,7 @@ kbd {
 }
 
 .wiki-sidebar__link-summary {
+    font-family: "iSans", sans-serif;
     font-size: 0.8rem;
     color: var(--text-secondary);
     line-height: 1.4;
@@ -1201,6 +1268,12 @@ kbd {
     flex-direction: column;
     gap: 2.5rem;
     min-width: 0;
+    height: 100%;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    -webkit-overflow-scrolling: touch;
 }
 
 .section-view {
@@ -1209,6 +1282,7 @@ kbd {
     gap: 2.5rem;
 }
 
+/* Section Content */
 .section-view__content {
     background: var(--surface-strong);
     border-radius: var(--radius-lg);
@@ -1231,6 +1305,7 @@ kbd {
     }
 }
 
+
 .section-view__content::after {
     content: "";
     position: absolute;
@@ -1244,7 +1319,6 @@ kbd {
         transparent
     );
     opacity: 0.3;
-    animation: pulseGlow 8s ease-in-out infinite;
 }
 
 @keyframes pulseGlow {
@@ -1267,7 +1341,7 @@ kbd {
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
-    padding: 0.35rem 0.7rem;
+    padding: 0.382rem 0.618rem;
     border-radius: 999px;
     font-size: 0.75rem;
     letter-spacing: 0.16em;
@@ -1294,7 +1368,7 @@ kbd {
         transparent
     );
     animation: shimmer 5s infinite;
-    mix-blend-mode: screen;
+    mix-blend-mode: overlay;
 }
 
 @keyframes shimmer {
@@ -1311,6 +1385,7 @@ kbd {
 
 .section-view__title {
     margin: 1.2rem 0 0.8rem;
+    font-family: "iSans", sans-serif;
     font-size: 2.1rem;
     letter-spacing: -0.01em;
     color: var(--text-primary);
@@ -1330,6 +1405,7 @@ kbd {
 
 .section-view__summary {
     margin: 0;
+    font-family: "iSans", sans-serif;
     font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.65;
@@ -1339,11 +1415,12 @@ kbd {
     margin-top: 1.3rem;
     display: flex;
     gap: 1.5rem;
+    font-family: "iSans", sans-serif;
     font-size: 0.8rem;
     color: var(--text-subtle);
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    animation: fadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.35s backwards;
+    letter-spacing: 0.1em;
+    animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s backwards;
 }
 
 .section-view__meta span {
@@ -1418,6 +1495,7 @@ kbd {
 }
 
 .section-view__pagination-label {
+    font-family: "iSans", sans-serif;
     font-size: 0.72rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -1425,6 +1503,7 @@ kbd {
 }
 
 .section-view__pagination-title {
+    font-family: "iSans", sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-primary);
@@ -1447,6 +1526,7 @@ kbd {
     margin-bottom: 1rem;
 }
 
+/* Markdown Overrides */
 .markdown-body {
     position: relative;
     z-index: 1;
@@ -1461,11 +1541,13 @@ kbd {
 }
 
 .mdx-h1 {
+    font-family: "iSans", sans-serif;
     font-size: 1.8rem;
     margin: 2.4rem 0 1rem;
 }
 
 .mdx-h2 {
+    font-family: "iSans", sans-serif;
     font-size: 1.45rem;
     margin: 2rem 0 0.75rem;
     position: relative;
@@ -1489,6 +1571,7 @@ kbd {
 }
 
 .mdx-h3 {
+    font-family: "iSans", sans-serif;
     font-size: 1.1rem;
     margin: 1.5rem 0 0.6rem;
     color: var(--text-primary);
@@ -1496,6 +1579,7 @@ kbd {
 
 .mdx-paragraph {
     margin: 0 0 1.4rem;
+    font-family: "iSans", sans-serif;
     font-size: 1rem;
     color: var(--text-secondary);
     animation: fadeInParagraph 0.5s ease-out backwards;
@@ -1575,6 +1659,7 @@ kbd {
 .mdx-table-wrapper th {
     text-align: left;
     font-weight: 600;
+    font-family: "iSans", sans-serif;
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -1593,6 +1678,7 @@ kbd {
     background: var(--surface);
 }
 
+/* Outline Panel */
 .outline-panel {
     position: sticky;
     top: 110px;
@@ -1621,6 +1707,7 @@ kbd {
 
 .outline-panel__title {
     margin: 0 0 1rem;
+    font-family: "iSans", sans-serif;
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.16em;
@@ -1647,6 +1734,7 @@ kbd {
 
 .outline-panel__item--level-3 {
     margin-left: 1.2rem;
+    font-family: "iSans", sans-serif;
     font-size: 0.85rem;
 }
 
@@ -1656,6 +1744,7 @@ kbd {
 
 .outline-panel__link {
     display: inline-block;
+    font-family: "iSans", sans-serif;
     font-size: 0.9rem;
     color: var(--text-secondary);
     transition:
@@ -1672,6 +1761,9 @@ kbd {
         transform var(--transition);
 }
 
+/* ============================== */
+/* Responsive                     */
+/* ============================== */
 @media (max-width: 1340px) {
     .wiki-body {
         grid-template-columns: minmax(240px, 280px) minmax(0, 1fr);
@@ -1712,14 +1804,15 @@ kbd {
 
     .wiki-body {
         grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
         gap: 1.8rem;
         padding: 2rem 1.8rem 3rem;
     }
 
     .wiki-sidebar {
-        position: static;
         height: auto;
         padding: 0;
+        overflow: visible;
     }
 
     .section-view__pagination {
@@ -1734,14 +1827,17 @@ kbd {
 
 @media (max-width: 720px) {
     .wiki-header__title {
+        font-family: "iSans", sans-serif;
         font-size: 1.05rem;
     }
 
     .wiki-header__subtitle {
+        font-family: "iSans", sans-serif;
         font-size: 0.75rem;
     }
 
     .wiki-sidebar__lead {
+        font-family: "iSans", sans-serif;
         font-size: 0.85rem;
     }
 
@@ -1750,14 +1846,17 @@ kbd {
     }
 
     .section-view__title {
+        font-family: "iSans", sans-serif;
         font-size: 1.6rem;
     }
 
     .mdx-h1 {
+        font-family: "iSans", sans-serif;
         font-size: 1.4rem;
     }
 
     .mdx-h2 {
+        font-family: "iSans", sans-serif;
         font-size: 1.2rem;
     }
 }
@@ -1773,4 +1872,15 @@ kbd {
 ::view-transition-old(*),
 ::view-transition-new(*) {
     animation: none !important;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

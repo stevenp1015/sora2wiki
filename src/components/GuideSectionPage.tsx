@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import MarkdownContent from "./MarkdownContent";
 import OutlinePanel from "./OutlinePanel";
 import { useLayoutContext } from "./layout/LayoutContext";
+import { getScrollContainer } from "../lib/utils";
 
 const GuideSectionPage: React.FC = () => {
   const { sectionId } = useParams<{ sectionId: string }>();
@@ -23,7 +24,12 @@ const GuideSectionPage: React.FC = () => {
   useEffect(() => {
     if (section) {
       setActiveSectionId(section.id);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      const scrollContainer = getScrollContainer();
+      if (scrollContainer) {
+        scrollContainer.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     }
   }, [section, setActiveSectionId, location.key]);
 

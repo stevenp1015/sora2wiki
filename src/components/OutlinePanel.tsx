@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import type { SectionHeading } from "../lib/sections";
+import { getScrollContainer } from "../lib/utils";
 
 type OutlinePanelProps = {
   headings: SectionHeading[];
@@ -15,6 +16,8 @@ const OutlinePanel: React.FC<OutlinePanelProps> = ({ headings }) => {
   useEffect(() => {
     if (!headings.length) return;
 
+    const scrollRoot = getScrollContainer();
+
     const observer = new IntersectionObserver(
       (entries) => {
         const visibleEntries = entries
@@ -27,11 +30,13 @@ const OutlinePanel: React.FC<OutlinePanelProps> = ({ headings }) => {
         }
 
         const firstHeading = document.getElementById(headings[0].id);
-        if (firstHeading && window.scrollY < firstHeading.offsetTop) {
+        const scrollPosition = scrollRoot ? scrollRoot.scrollTop : window.scrollY;
+        if (firstHeading && scrollPosition < firstHeading.offsetTop) {
           setActiveId(headings[0].id);
         }
       },
       {
+        root: scrollRoot ?? null,
         rootMargin: "-40% 0px -50% 0px",
         threshold: [0, 0.2, 0.4, 0.6, 0.8, 1],
       },
