@@ -42,9 +42,7 @@ const Header: React.FC = () => {
         </span>
         <div>
           <div className="wiki-header__title">Sora² Atlas</div>
-          <div className="wiki-header__subtitle">
-            Operator manual for OpenAI's cinematic engine
-          </div>
+          <div className="wiki-header__subtitle">The Funofficial Wiki</div>
         </div>
       </div>
       <ThemeControls />

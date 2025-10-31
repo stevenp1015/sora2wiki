@@ -1,0 +1,566 @@
+{
+  "wiki_title": "The Sora 2 Encyclopedia: The Definitive Guide",
+  "categories": [
+    {
+      "category_title": "Getting Started",
+      "category_slug": "getting-started",
+      "category_description": "The zero-to-hero journey. From 'what is this?' to 'I just made my first video.' This is the main funnel.",
+      "articles": [
+        {
+          "article_title": "What is Sora 2? An Executive Overview of the Model, App, and Ecosystem",
+          "article_slug": "what-is-sora-2-overview",
+          "seo_description": "A high-level executive overview of the Sora 2 text-to-video AI model, the social app, and the entire creative ecosystem.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "How to Get Access to Sora 2: A Step-by-Step Guide to the Waitlist and Invite Codes",
+          "article_slug": "how-to-get-sora-2-access-guide",
+          "seo_description": "A complete step-by-step guide on the only legitimate ways to get access to Sora 2, including the official waitlist and community invite codes.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "[LIVE] The Sora 2 Invite Tracker: How to Find a Working Community Code",
+          "article_slug": "sora-2-invite-tracker-community-codes",
+          "seo_description": "Learn the best strategies for finding a working Sora 2 community invite code on Discord, Reddit, and X (Twitter) using live trackers.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Navigating the Sora 2 App: A Tour of the UI, Feed, and Creation Tools",
+          "article_slug": "sora-2-app-ui-tour",
+          "seo_description": "A complete walkthrough of the Sora 2 app interface, including the video feed, creation tools, remix button, and profile settings.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Your First Video: A Guided Walkthrough from Prompt to Generation",
+          "article_slug": "your-first-sora-2-video-walkthrough",
+          "seo_description": "A beginner's guide to creating your very first Sora 2 video, from writing a simple prompt to downloading the final result.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Understanding the Sora 2 Plans: Free vs. Pro Tiers Explained",
+          "article_slug": "sora-2-free-vs-pro-plans",
+          "seo_description": "A detailed breakdown of the differences between the Sora 2 Free and Pro plans, including watermarks, resolution, and generation limits.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Sora 2 for Android: Release Date News and How to Pre-Register",
+          "article_slug": "sora-2-android-release-date",
+          "seo_description": "Stay up-to-date on the latest news and speculation about the Sora 2 for Android release date and learn how to pre-register.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Sora 2 on the Web: A Guide to the Desktop Interface",
+          "article_slug": "sora-2-web-desktop-guide",
+          "seo_description": "Learn how to use the Sora 2 web app on your desktop or laptop, including its unique features and advantages over the mobile app.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Is My Phone/PC Compatible? Sora 2 System Requirements",
+          "article_slug": "sora-2-system-requirements",
+          "seo_description": "Find out the official system requirements for running the Sora 2 app on iOS, Android, and the web to ensure your device is compatible.",
+          "content_markdown": ""
+        }
+      ]
+    },
+    {
+      "category_title": "Core Concepts",
+      "category_slug": "core-concepts",
+      "category_description": "The 'how it works' for non-engineers. Demystifying the magic so you can control it.",
+      "articles": [
+        {
+          "article_title": "Understanding Diffusion Transformer (DiT) Models: A Plain-English Explanation",
+          "article_slug": "diffusion-transformer-dit-explained",
+          "seo_description": "A simple, plain-English explanation of what a Diffusion Transformer (DiT) model is and why it's the technology that powers Sora 2.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "How Sora 2 Simulates Physics: From Gravity to Fluid Dynamics",
+          "article_slug": "sora-2-physics-simulation",
+          "seo_description": "Learn how Sora 2's AI model is able to simulate realistic physics, including gravity, momentum, and complex fluid dynamics.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "The 'World State': How Sora 2 Achieves Temporal and Character Consistency",
+          "article_slug": "sora-2-world-state-consistency",
+          "seo_description": "A deep dive into the 'world state' concept, explaining how Sora 2 maintains character and scene consistency over time.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Natively Synchronized Audio: A Deep Dive into Sora 2's Sound Generation",
+          "article_slug": "sora-2-native-audio-generation",
+          "seo_description": "Explore Sora 2's groundbreaking native audio generation, which creates synchronized dialogue, sound effects, and ambience with your video.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Core Generation Modes Explained: Text-to-Video, Image-to-Video, and Video-to-Video",
+          "article_slug": "sora-2-generation-modes-t2v-i2v-v2v",
+          "seo_description": "A clear breakdown of the main creation modes in Sora 2: Text-to-Video (T2V), Image-to-Video (I2V), and Video-to-Video (V2V).",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "The 'Cameo' Feature: How Likeness Control and Consent Works",
+          "article_slug": "sora-2-cameo-feature-likeness-consent",
+          "seo_description": "Learn about the Sora 2 'Cameo' feature, how it works, and the strict consent-based system for controlling your digital likeness.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "What is a 'Spacetime Patch'? Sora 2's Secret Sauce",
+          "article_slug": "sora-2-spacetime-patches-explained",
+          "seo_description": "A simplified explanation of 'spacetime patches,' the core data units Sora 2 uses to understand video in both space and time.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Understanding Sora 2's Limitations: What It Can't Do (Yet)",
+          "article_slug": "sora-2-limitations-what-it-cant-do",
+          "seo_description": "A realistic look at the current limitations of Sora 2, from hand and limb warping to complex physics failures and logical inconsistencies.",
+          "content_markdown": ""
+        }
+      ]
+    },
+    {
+      "category_title": "The Encyclopedia of Prompt Engineering",
+      "category_slug": "prompt-engineering",
+      "category_description": "The crown jewel. A multi-hundred page masterclass. This isn't a 'tips' page; it's a goddamn cinematic arts degree.",
+      "articles": [
+        {
+          "article_title": "The Art of Cinematic Language: Thinking Like a Director",
+          "article_slug": "prompting-cinematic-language-thinking-like-director",
+          "seo_description": "The foundational guide to Sora 2 prompt engineering. Learn to stop describing scenes and start directing them with cinematic language.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Prompt Anatomy 101: Structuring for Predictable Results",
+          "article_slug": "sora-2-prompt-anatomy-101",
+          "seo_description": "Learn the best way to structure your Sora 2 prompts for predictable, high-quality results by breaking them down into key components.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Short Prompts vs. Long Prompts: Balancing Creative Freedom and Control",
+          "article_slug": "sora-2-short-vs-long-prompts",
+          "seo_description": "A guide to the trade-offs between short, creative prompts and long, detailed prompts for controlling your Sora 2 video generations.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "A Guide to Camera Controls: Dolly, Zoom, Pan, Crane, and Tracking Shots",
+          "article_slug": "sora-2-camera-controls-dolly-zoom-pan",
+          "seo_description": "Master cinematic camera movements in Sora 2. This guide covers prompts for dolly-in, zoom-out, pan, tilt, crane shots, and tracking shots.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Controlling the Lens: Simulating 24mm, 35mm, and 85mm Lenses",
+          "article_slug": "sora-2-lens-controls-24mm-35mm-85mm",
+          "seo_description": "Learn how to simulate different camera lenses in Sora 2 (e.g., 24mm, 35mm, 85mm) to control focal length, depth of field, and perspective.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Mastering Cinematic Lighting: From Golden Hour to Neon Noir",
+          "article_slug": "sora-2-cinematic-lighting-golden-hour-neon-noir",
+          "seo_description": "A deep dive into controlling light in your prompts. Master styles like golden hour, high-key, low-key, and neon noir.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "A Deep Dive into 'Style' Keywords: From 'Ghibli' to 'Arri Alexa'",
+          "article_slug": "sora-2-style-keywords-ghibli-arri-alexa",
+          "seo_description": "Unlock Sora 2's stylistic range. This guide explores powerful keywords like 'Studio Ghibli,' 'Arri Alexa,' '16mm film,' and 'Unreal Engine.'",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Achieving Photorealism: Prompts for Realistic Textures, Skin, and Materials",
+          "article_slug": "sora-2-photorealism-prompts-textures-skin",
+          "seo_description": "Go beyond 'photorealistic.' Learn to prompt for specific, realistic textures, materials, and skin properties to achieve true-to-life results.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "How to Control Color: A Guide to Palette Anchors and Grading",
+          "article_slug": "sora-2-color-control-palette-anchors",
+          "seo_description": "A guide to controlling the color palette of your videos using 'palette anchor' keywords and descriptive color grading terms.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Mastering 'Shot on Film' Prompts: 16mm, 35mm, and VHS Aesthetics",
+          "article_slug": "sora-2-shot-on-film-prompts-16mm-vhs",
+          "seo_description": "Learn to perfectly replicate analog film aesthetics, including grainy 16mm, cinematic 35mm, and degraded VHS tape looks.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Controlling Weather: A Guide to Rain, Snow, and Fog Prompts",
+          "article_slug": "sora-2-weather-prompts-rain-snow-fog",
+          "seo_description": "A guide to adding realistic weather to your scenes, from light drizzle and dense fog to heavy snow and driving rain.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "A Guide to Character Consistency: The 'Character Sheet' Method",
+          "article_slug": "sora-2-character-consistency-sheet-method",
+          "seo_description": "The definitive guide to maintaining character consistency across multiple shots using the 'Character Sheet' reference image and text prompt method.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Generating Complex Multi-Angle Scenes",
+          "article_slug": "sora-2-multi-angle-scenes-guide",
+          "seo_description": "Learn how to generate a single scene from multiple camera angles (e.g., a dialogue scene) by creating and stitching separate clips.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Controlling Subject Motion: Using 'Beats' for Precise Action Timing",
+          "article_slug": "sora-2-motion-control-using-beats",
+          "seo_description": "A power-user technique for controlling the precise timing of actions by describing them in 'beats' or counts (e.g., 'walks for 4 beats').",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Simulating Realistic Failure: How to Prompt for Imperfect Outcomes",
+          "article_slug": "sora-2-prompting-realistic-failure",
+          "seo_description": "An advanced guide to adding realism by prompting for plausible failures and imperfect outcomes, like a basketball missing a shot.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Prompting for Animals: A Guide to Realistic Fur, Feathers, and Motion",
+          "article_slug": "sora-2-prompting-animals-fur-motion",
+          "seo_description": "A deep dive into creating realistic animals, with specific prompts for accurate fur, feathers, and natural motion.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Prompting for Architecture: From Brutalist Structures to Fantasy Castles",
+          "article_slug": "sora-2-prompting-architecture-brutalist-fantasy",
+          "seo_description": "A guide for architects and designers on how to generate specific architectural styles, from modern brutalism to epic fantasy structures.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Creating Realistic Explosions and Fire Effects",
+          "article_slug": "sora-2-prompting-explosions-fire-effects",
+          "seo_description": "Learn the keywords and physics descriptions needed to generate realistic fire, smoke, and explosion effects for action scenes.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Simulating Water: Oceans, Rivers, and Raindrops",
+          "article_slug": "sora-2-prompting-water-oceans-raindrops",
+          "seo_description": "A guide to generating realistic water, from massive ocean waves and flowing rivers to close-ups of raindrops on a window.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "How to Write and Format Dialogue for Accurate Lip-Sync",
+          "article_slug": "sora-2-dialogue-format-lip-sync",
+          "seo_description": "Learn the best practices for writing and formatting dialogue in your prompts (e.g., using speaker tags) to get the most accurate lip-sync.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "A Guide to Prompting Sound Design: Ambience, Foley, and SFX",
+          "article_slug": "sora-2-prompting-sound-design-ambience-foley",
+          "seo_description": "Master Sora 2's audio generation by prompting for specific sound design, including background ambience, foley, and sound effects.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Controlling Voice Tone: (Whispering), (Shouting), (Excited)",
+          "article_slug": "sora-2-prompting-voice-tone-whispering-shouting",
+          "seo_description": "Learn to control the emotional delivery of generated dialogue by using parenthetical cues like (whispering), (shouting), or (excited).",
+          "content_markdown": ""
+        }
+      ]
+    },
+    {
+      "category_title": "Advanced Techniques & Workflows",
+      "category_slug": "advanced-techniques-workflows",
+      "category_description": "For the power users. Multi-step, multi-tool pipelines that push the boundaries of what's possible.",
+      "articles": [
+        {
+          "article_title": "The Multi-Shot Method: Creating Long-Form Videos by Chaining Prompts",
+          "article_slug": "sora-2-multi-shot-method-long-form-video",
+          "seo_description": "Learn how to create long-form videos by 'chaining' multiple short prompts together to create a continuous, narrative scene.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Advanced Character Consistency Using Reference Images and Custom GPTs",
+          "article_slug": "sora-2-advanced-character-consistency-gpt",
+          "seo_description": "A power-user workflow for near-perfect character consistency using a Midjourney reference image and a custom GPT for prompt management.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "The 'Static Video' Trick: Locking a Scene for Controlled Remixing",
+          "article_slug": "sora-2-static-video-trick-remixing",
+          "seo_description": "A community-discovered 'hack' to gain more control over remixing by first creating a static, unmoving video of your scene.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Image-to-Video Workflows for Brand and Character Integration",
+          "article_slug": "sora-2-image-to-video-workflow-brands",
+          "seo_description": "A guide for brands and artists on using the Image-to-Video (I2V) feature to integrate logos, products, and characters.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Using JSON-like Structures for Complex Prompt Organization",
+          "article_slug": "sora-2-json-prompt-organization",
+          "seo_description": "An advanced technique for organizing complex, multi-part prompts using a JSON-like structure within the text input for better results.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "The 'Green Screen' Method: Prompting for Easy Video Compositing",
+          "article_slug": "sora-2-green-screen-prompting-compositing",
+          "seo_description": "Learn how to prompt for subjects on a 'solid green background' or 'green screen' for easy removal and compositing in video editors.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Video-to-Video: A Deep Dive into the 'Remix' and 'Blend' Features",
+          "article_slug": "sora-2-video-to-video-remix-blend",
+          "seo_description": "A detailed look at the 'Remix' and 'Blend' features, Sora 2's powerful tools for video-to-video modification and style transfer.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Creating Seamless Loops for GIFs and Social Media Banners",
+          "article_slug": "sora-2-seamless-loops-gifs",
+          "seo_description": "Learn the prompting techniques to create perfectly seamless, looping videos ideal for website backgrounds, GIFs, and social media.",
+          "content_markdown": ""
+        }
+      ]
+    },
+    {
+      "category_title": "Troubleshooting & Error Fixing",
+      "category_slug": "troubleshooting-error-fixing",
+      "category_description": "Things are broken. How to fix them. The most high-intent, problem-solving content on the web.",
+      "articles": [
+        {
+          "article_title": "How to Fix Blurry Faces and Low-Quality Output",
+          "article_slug": "sora-2-fix-blurry-faces-low-quality",
+          "seo_description": "A complete guide to fixing blurry faces and low-quality video output in Sora 2, from prompt tips to the Pro plan and upscalers.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Why Sora 2 Ignores or Blocks Your Prompt (And How to Fix It)",
+          "article_slug": "sora-2-prompt-ignored-blocked-fix",
+          "seo_description": "Understand why Sora 2 might be ignoring part of your prompt (model confusion) or blocking it entirely (safety violations) and how to fix it.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Troubleshooting 'Physics Simulation Failed': Why Your Basketball Bounces Sideways",
+          "article_slug": "sora-2-fix-physics-simulation-failed",
+          "seo_description": "A guide to understanding why Sora 2's physics fail and how to write better prompts to avoid unrealistic motion and interactions.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Fixing 'Warped Limbs' and 'Melting Objects': A Guide to Model Coherency",
+          "article_slug": "sora-2-fix-warped-limbs-melting-objects",
+          "seo_description": "Learn why Sora 2 sometimes creates 'warped limbs' or 'melting' objects and the prompting techniques to improve model coherency.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Why is My Lip-Sync So Bad? A Guide to Audio/Video Alignment",
+          "article_slug": "sora-2-fix-bad-lip-sync",
+          "seo_description": "A guide to troubleshooting and fixing bad lip-sync in Sora 2, including dialogue formatting and prompt-length limitations.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "'Invite Code Has Reached Its Limit': What This Error Really Means",
+          "article_slug": "sora-2-invite-code-limit-error",
+          "seo_description": "Seeing the 'code has reached its limit' error? This guide explains what it means and what your next steps should be.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Fixing 'Region Not Available': A Guide to VPNs and App Store Regions",
+          "article_slug": "sora-2-fix-region-not-available-vpn",
+          "seo_description": "A step-by-step guide on how to (potentially) fix the 'Sora is not available in your region' error using VPNs and changing App Store regions.",
+          "content_markdown": ""
+        }
+      ]
+    },
+    {
+      "category_title": "Technical Deep Dive",
+      "category_slug": "technical-deep-dive",
+      "category_description": "For the nerds, engineers, and researchers. The hardcore 1s and 0s behind the magic.",
+      "articles": [
+        {
+          "article_title": "Sora 2 Architecture: A Breakdown of the Diffusion Transformer (DiT)",
+          "article_slug": "sora-2-architecture-diffusion-transformer-dit",
+          "seo_description": "A technical breakdown of the Sora 2 architecture, explaining the role of the Diffusion Transformer (DiT) and spatiotemporal attention.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "The Role of the Variational Autoencoder (VAE) in Latent Space",
+          "article_slug": "sora-2-vae-latent-space-explained",
+          "seo_description": "A deep dive into the Variational Autoencoder (VAE) and its critical role in compressing video into a latent space for the DiT to process.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Analysis of Training Data: Speculation on Datasets and Filtering",
+          "article_slug": "sora-2-training-data-analysis-speculation",
+          "seo_description": "An analysis and educated speculation on the massive datasets used to train Sora 2, including public internet data and licensed content.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "The Sora 2 API: Endpoints, Parameters, and Integration Guide",
+          "article_slug": "sora-2-api-guide-endpoints-parameters",
+          "seo_description": "A developer's guide to the (official and third-party) Sora 2 API, detailing key endpoints, parameters, and integration strategies.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Understanding Sora 2's Three-Layer Moderation System",
+          "article_slug": "sora-2-three-layer-moderation-system",
+          "seo_description": "A technical look at the three-layer safety and moderation system (prompt scanning, media review, output blocking) that governs Sora 2.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "A Review of Academic Papers Analyzing Sora's Architecture",
+          "article_slug": "sora-architecture-academic-paper-review",
+          "seo_description": "A summary and review of the key academic papers (like Open-Sora 2.0) that analyze and attempt to replicate Sora's architecture.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Open-Sora 2.0 vs. Official Sora 2: A Technical Comparison",
+          "article_slug": "open-sora-2-vs-official-sora-2",
+          "seo_description": "A technical comparison between OpenAI's official Sora 2 model and the leading open-source replication project, Open-Sora 2.0.",
+          "content_markdown": ""
+        }
+      ]
+    },
+    {
+      "category_title": "Use Cases & Industry Showcases",
+      "category_slug": "use-cases-industry-showcases",
+      "category_description": "How is this thing actually being used in the real world? From filmmaking to marketing.",
+      "articles": [
+        {
+          "article_title": "Sora 2 for Filmmaking: Pre-visualization, B-Roll, and Concepting",
+          "article_slug": "sora-2-for-filmmaking-previsualization-b-roll",
+          "seo_description": "Explore how professional filmmakers are using Sora 2 for rapid pre-visualization, animated storyboards, and generating custom B-roll.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Sora 2 for Marketing & Advertising: A Guide to Creating Product Demos and Social Ads",
+          "article_slug": "sora-2-for-marketing-advertising-product-demos",
+          "seo_description": "A guide for marketers on using Sora 2 to create high-quality product demos, social media ads, and for rapid A/B testing of concepts.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Viral Case Studies: Deconstructing the Most Impressive Sora 2 Videos",
+          "article_slug": "sora-2-viral-videos-case-studies-deconstructed",
+          "seo_description": "A breakdown of the most viral Sora 2 videos, from IP remixes to retro commercial parodies, explaining the prompts that made them work.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Sora 2 for Education: Creating Explainer Videos and Simulations",
+          "article_slug": "sora-2-for-education-explainer-videos",
+          "seo_description": "Learn how educators are using Sora 2 to create custom animated explainer videos and historical or scientific simulations for the classroom.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Integrating Sora 2 with Adobe Creative Cloud: Photoshop and Premiere Pro Workflows",
+          "article_slug": "sora-2-adobe-creative-cloud-photoshop-premiere-workflow",
+          "seo_description": "A professional workflow guide for integrating Sora 2 video clips into Adobe Premiere Pro and Photoshop for compositing and editing.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Sora 2 for Architects: Visualizing Dynamic Renders",
+          "article_slug": "sora-2-for-architects-dynamic-renders",
+          "seo_description": "See how architects are using Sora 2 to turn static renders into dynamic, populated video visualizations of their designs.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Sora 2 for Game Developers: Creating Cutscenes and Concept Art",
+          "article_slug": "sora-2-for-game-developers-cutscenes-concept-art",
+          "seo_description": "A look at how game developers are using Sora 2 for rapid prototyping of in-game cutscenes and generating animated concept art.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Sora 2 for Musicians: The New Wave of AI-Generated Music Videos",
+          "article_slug": "sora-2-ai-music-videos-guide",
+          "seo_description": "A guide for musicians and bands on how to use Sora 2 to create stunning, professional-quality music videos on a zero budget.",
+          "content_markdown": ""
+        }
+      ]
+    },
+    {
+      "category_title": "Ecosystem, Tools & Competitors",
+      "category_slug": "ecosystem-tools-competitors",
+      "category_description": "Sora 2 doesn't exist in a vacuum. Here's the rest of the universe it lives in.",
+      "articles": [
+        {
+          "article_title": "Sora 2 vs. Google Veo 3.1: A Head-to-Head Comparison",
+          "article_slug": "sora-2-vs-google-veo-3-1-comparison",
+          "seo_description": "A detailed, feature-by-feature comparison between the two giants of text-to-video: OpenAI's Sora 2 and Google's Veo 3.1.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Sora 2 vs. Runway Gen-4: Which is Better for Creatives?",
+          "article_slug": "sora-2-vs-runway-gen-4-comparison",
+          "seo_description": "A breakdown for creative professionals: Should you use Sora 2 for fidelity or Runway Gen-4 for its integrated creative suite and control?",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Sora 2 vs. Pika and Kling: The Full Market Breakdown",
+          "article_slug": "sora-2-vs-pika-vs-kling-comparison",
+          "seo_description": "How does Sora 2 stack up against the other major players? A full comparison with Pika Labs and the long-duration specialist, Kling.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "A Guide to Third-Party API Wrappers (Replicate, Pollo, etc.)",
+          "article_slug": "sora-2-third-party-api-wrappers-guide",
+          "seo_description": "A review of the best third-party API wrapper services like Replicate and Pollo.ai for integrating Sora 2 into your own application.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Reviewing Sora 2 Video Enhancer and Upscaling Tools",
+          "article_slug": "sora-2-video-enhancer-upscaler-review",
+          "seo_description": "A review of the top AI video enhancers and upscalers (like Higgsfield) designed to fix Sora 2's blurry output and artifacts.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Community-Built Prompt Builder Tools and Resources",
+          "article_slug": "sora-2-community-prompt-builder-tools",
+          "seo_description": "A curated list of the best community-built prompt builder tools, GPTs, and libraries to help you craft the perfect Sora 2 prompt.",
+          "content_markdown": ""
+        }
+      ]
+    },
+    {
+      "category_title": "Safety, Ethics & The Future",
+      "category_slug": "safety-ethics-future",
+      "category_description": "The big, scary, important questions. The deepfakes, the copyright, and what comes next.",
+      "articles": [
+        {
+          "article_title": "The Deepfake Dilemma: OpenAI's Stance and the SAG-AFTRA Agreement",
+          "article_slug": "sora-2-deepfake-dilemma-sag-aftra",
+          "seo_description": "A detailed look at the deepfake problem and the historic agreement between OpenAI and SAG-AFTRA to protect actor likenesses.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Copyright and Fair Use: The 'AI Slop' Controversy and OpenAI's Response",
+          "article_slug": "sora-2-copyright-fair-use-ai-slop-controversy",
+          "seo_description": "An analysis of the 'AI slop' copyright controversy and OpenAI's response to criticism about training on protected IP.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "A Guide to Sora 2's Content Policies and Safeguards",
+          "article_slug": "sora-2-content-policies-safeguards-guide",
+          "seo_description": "A clear guide to the Sora 2 content policies, what is blocked, and the safeguards in place to prevent misuse.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "The Future of Sora: From World Simulator to General Purpose Agent",
+          "article_slug": "sora-2-future-world-simulator-agi",
+          "seo_description": "Explore OpenAI's ambitious long-term vision for Sora 2, not just as a creative tool, but as a 'world simulator' and a step towards AGI.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "The Bryan Cranston Incident: A Full Breakdown",
+          "article_slug": "sora-2-bryan-cranston-incident-breakdown",
+          "seo_description": "A full breakdown of the Bryan Cranston / SAG-AFTRA deepfake incident and how it changed OpenAI's policies on likeness forever.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "Why Can't I Generate Batman? A Guide to Copyright Guardrails",
+          "article_slug": "sora-2-why-cant-i-generate-batman-copyright",
+          "seo_description": "An explanation of why Sora 2 blocks prompts for copyrighted characters like Batman and a guide to its IP guardrail system.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "The 'Historical Figures' Policy: Why It Was Paused",
+          "article_slug": "sora-2-historical-figures-policy-paused",
+          "seo_description": "A look at the controversy surrounding the generation of 'historical figures' like MLK Jr. and why OpenAI paused the feature.",
+          "content_markdown": ""
+        },
+        {
+          "article_title": "C2PA and Watermarking: How to Verify AI-Generated Video",
+          "article_slug": "sora-2-c2pa-watermarking-verification-guide",
+          "seo_description": "Learn how Sora 2 uses C2PA metadata and visible watermarking to ensure content provenance and help you verify AI-generated video.",
+          "content_markdown": ""
+        }
+      ]
+    }
+  ]
+}
