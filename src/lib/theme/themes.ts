@@ -203,7 +203,7 @@ export const getInitialThemeSettings = (): ThemeSettings => {
   const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
   const storedMode = localStorage.getItem(MODE_STORAGE_KEY);
 
-  const rootTheme = document.documentElement.dataset.theme;
+  const rootTheme = document.documentElement.dataset.theme ?? null;
   const rootMode = document.documentElement.classList.contains("dark")
     ? "dark"
     : "light";
@@ -211,7 +211,7 @@ export const getInitialThemeSettings = (): ThemeSettings => {
   const themeId = isThemeId(storedTheme)
     ? storedTheme
     : isThemeId(rootTheme)
-      ? (rootTheme as ThemeId)
+      ? rootTheme  // No need for type assertion here since isThemeId already narrowed the type
       : DEFAULT_THEME_ID;
 
   const mode: ThemeMode =

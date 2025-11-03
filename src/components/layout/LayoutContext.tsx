@@ -1,12 +1,12 @@
 import React, { createContext, useContext } from "react";
-import { GuideSection } from "../../lib/sections";
+import { NavItem } from "./AppLayout";
 
 type LayoutContextValue = {
-  sections: GuideSection[];
+  sections: NavItem[];
   searchTerm: string;
   setSearchTerm: (value: string) => void;
   setActiveSectionId: (id: string) => void;
-  activeSection?: GuideSection;
+  activeSection: NavItem | null;
 };
 
 export const LayoutContext = createContext<LayoutContextValue | undefined>(

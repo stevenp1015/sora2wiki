@@ -105,6 +105,29 @@
     --shadow-soft: 0 10px 40px -10px rgba(15, 23, 42, 0.08);
     --shadow-strong: 0 20px 60px -15px rgba(15, 23, 42, 0.12);
     --transition: 160ms ease;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: #ffffff;
+    /* White */
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    /* Re-mapping shadcn 'accent' to your 'accent-soft' */
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    /* This was the critical missing piece */
+    --radius: var(--radius-md);
 }
 
 html.dark {
@@ -126,6 +149,27 @@ html.dark {
     --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.4);
     --shadow-strong: 0 20px 60px -15px rgba(0, 0, 0, 0.6);
     --transition: 160ms ease;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    /* Dark bg */
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="nocturne"] {
@@ -140,6 +184,26 @@ html[data-theme="nocturne"] {
     --accent: #6366f1;
     --accent-soft: rgba(99, 102, 241, 0.32);
     --glow: #aab5ff;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="nocturne"] {
@@ -154,6 +218,26 @@ html.dark[data-theme="nocturne"] {
     --accent: #8b9bff;
     --accent-soft: rgba(139, 155, 255, 0.42);
     --glow: #7886d7;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="verdant"] {
@@ -168,6 +252,26 @@ html[data-theme="verdant"] {
     --accent: #3fb27f;
     --accent-soft: rgba(63, 178, 127, 0.32);
     --glow: #abe9cc;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="verdant"] {
@@ -182,6 +286,26 @@ html.dark[data-theme="verdant"] {
     --accent: #8ff0c0;
     --accent-soft: rgba(143, 240, 192, 0.42);
     --glow: #66d1a0;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="ember"] {
@@ -196,6 +320,26 @@ html[data-theme="ember"] {
     --accent: #ff7a55;
     --accent-soft: rgba(255, 122, 85, 0.3);
     --glow: #ffc8b2;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="ember"] {
@@ -210,6 +354,26 @@ html.dark[data-theme="ember"] {
     --accent: #ff956f;
     --accent-soft: rgba(255, 149, 111, 0.45);
     --glow: #ffb599;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="cubey"] {
@@ -224,6 +388,26 @@ html[data-theme="cubey"] {
     --accent: #4dd2ff;
     --accent-soft: rgba(77, 210, 255, 0.3);
     --glow: #a1e8ff;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="cubey"] {
@@ -238,6 +422,26 @@ html.dark[data-theme="cubey"] {
     --accent: #6be3ff;
     --accent-soft: rgba(107, 227, 255, 0.45);
     --glow: #7de3ff;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="sakura"] {
@@ -252,6 +456,26 @@ html[data-theme="sakura"] {
     --accent: #ff6b9d;
     --accent-soft: rgba(255, 107, 157, 0.3);
     --glow: #ffa8c8;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="sakura"] {
@@ -266,6 +490,26 @@ html.dark[data-theme="sakura"] {
     --accent: #ff8cb5;
     --accent-soft: rgba(255, 140, 181, 0.4);
     --glow: #ff7da8;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="copper"] {
@@ -280,6 +524,26 @@ html[data-theme="copper"] {
     --accent: #d9724d;
     --accent-soft: rgba(217, 114, 77, 0.3);
     --glow: #f0a080;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="copper"] {
@@ -294,6 +558,26 @@ html.dark[data-theme="copper"] {
     --accent: #f08860;
     --accent-soft: rgba(240, 136, 96, 0.42);
     --glow: #ffa580;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="arctic"] {
@@ -308,6 +592,26 @@ html[data-theme="arctic"] {
     --accent: #5eb3ff;
     --accent-soft: rgba(94, 179, 255, 0.3);
     --glow: #a0d4ff;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="arctic"] {
@@ -322,6 +626,26 @@ html.dark[data-theme="arctic"] {
     --accent: #6ec4ff;
     --accent-soft: rgba(110, 196, 255, 0.42);
     --glow: #80d0ff;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="purp"] {
@@ -336,6 +660,26 @@ html[data-theme="purp"] {
     --accent: #9d7bff;
     --accent-soft: rgba(157, 123, 255, 0.3);
     --glow: #c4a8ff;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="purp"] {
@@ -350,6 +694,26 @@ html.dark[data-theme="purp"] {
     --accent: #b594ff;
     --accent-soft: rgba(181, 148, 255, 0.42);
     --glow: #a582ff;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="coral"] {
@@ -364,6 +728,26 @@ html[data-theme="coral"] {
     --accent: #ff7f6a;
     --accent-soft: rgba(255, 127, 106, 0.3);
     --glow: #ffb4a1;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="coral"] {
@@ -378,6 +762,26 @@ html.dark[data-theme="coral"] {
     --accent: #ff9580;
     --accent-soft: rgba(255, 149, 128, 0.42);
     --glow: #ffad99;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="sunset"] {
@@ -392,6 +796,26 @@ html[data-theme="sunset"] {
     --accent: #ff8f5c;
     --accent-soft: rgba(255, 143, 92, 0.3);
     --glow: #ffb896;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="sunset"] {
@@ -406,6 +830,26 @@ html.dark[data-theme="sunset"] {
     --accent: #ffa370;
     --accent-soft: rgba(255, 163, 112, 0.42);
     --glow: #ffb78a;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="forest"] {
@@ -420,6 +864,26 @@ html[data-theme="forest"] {
     --accent: #2d8659;
     --accent-soft: rgba(45, 134, 89, 0.3);
     --glow: #6bc294;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="forest"] {
@@ -434,6 +898,26 @@ html.dark[data-theme="forest"] {
     --accent: #45a873;
     --accent-soft: rgba(69, 168, 115, 0.42);
     --glow: #58ba86;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="sand"] {
@@ -448,6 +932,26 @@ html[data-theme="sand"] {
     --accent: #c9a76d;
     --accent-soft: rgba(201, 167, 109, 0.3);
     --glow: #e6d0a3;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="sand"] {
@@ -462,6 +966,26 @@ html.dark[data-theme="sand"] {
     --accent: #ddb87f;
     --accent-soft: rgba(221, 184, 127, 0.42);
     --glow: #f0cc99;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="slate"] {
@@ -476,6 +1000,26 @@ html[data-theme="slate"] {
     --accent: #6b7785;
     --accent-soft: rgba(107, 119, 133, 0.3);
     --glow: #9ba5b3;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="slate"] {
@@ -490,6 +1034,26 @@ html.dark[data-theme="slate"] {
     --accent: #8893a3;
     --accent-soft: rgba(136, 147, 163, 0.42);
     --glow: #a0abb8;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="rose"] {
@@ -504,6 +1068,26 @@ html[data-theme="rose"] {
     --accent: #e8a098;
     --accent-soft: rgba(232, 160, 152, 0.3);
     --glow: #ffc5bd;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="rose"] {
@@ -518,6 +1102,26 @@ html.dark[data-theme="rose"] {
     --accent: #ffb3aa;
     --accent-soft: rgba(255, 179, 170, 0.42);
     --glow: #ffc2b8;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="mint"] {
@@ -532,6 +1136,26 @@ html[data-theme="mint"] {
     --accent: #5ce0b0;
     --accent-soft: rgba(92, 224, 176, 0.3);
     --glow: #a0f0d0;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="mint"] {
@@ -546,6 +1170,26 @@ html.dark[data-theme="mint"] {
     --accent: #70f0c5;
     --accent-soft: rgba(112, 240, 197, 0.42);
     --glow: #85ffd3;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="indigo"] {
@@ -560,6 +1204,26 @@ html[data-theme="indigo"] {
     --accent: #5b6fff;
     --accent-soft: rgba(91, 111, 255, 0.3);
     --glow: #a0abff;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="indigo"] {
@@ -574,6 +1238,26 @@ html.dark[data-theme="indigo"] {
     --accent: #7585ff;
     --accent-soft: rgba(117, 133, 255, 0.42);
     --glow: #8599ff;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="amber"] {
@@ -588,6 +1272,26 @@ html[data-theme="amber"] {
     --accent: #ffb84d;
     --accent-soft: rgba(255, 184, 77, 0.3);
     --glow: #ffd699;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="amber"] {
@@ -602,6 +1306,26 @@ html.dark[data-theme="amber"] {
     --accent: #ffc966;
     --accent-soft: rgba(255, 201, 102, 0.42);
     --glow: #ffdb99;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="plum"] {
@@ -616,6 +1340,26 @@ html[data-theme="plum"] {
     --accent: #a566cc;
     --accent-soft: rgba(165, 102, 204, 0.3);
     --glow: #c99ee6;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="plum"] {
@@ -630,6 +1374,26 @@ html.dark[data-theme="plum"] {
     --accent: #b880d9;
     --accent-soft: rgba(184, 128, 217, 0.42);
     --glow: #cc99e6;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html[data-theme="ocean"] {
@@ -644,6 +1408,26 @@ html[data-theme="ocean"] {
     --accent: #2d9ece;
     --accent-soft: rgba(45, 158, 206, 0.3);
     --glow: #7ac8ea;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--surface);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
 
 html.dark[data-theme="ocean"] {
@@ -658,7 +1442,148 @@ html.dark[data-theme="ocean"] {
     --accent: #45b5e6;
     --accent-soft: rgba(69, 181, 230, 0.42);
     --glow: #5cc4f0;
+
+    /* --- SHADCN/UI ADAPTER VARIABLES --- */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-strong);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface-strong);
+    --secondary-foreground: var(--text-secondary);
+    --muted: var(--surface-strong);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-soft);
+    --accent-foreground: var(--text-secondary);
+    --destructive: #b91c1c;
+    --destructive-foreground: #ffffff;
+    --input: var(--border);
+    --ring: var(--accent);
+    --radius: var(--radius-md);
 }
+
+/* ============================== */
+/* Tailwind v4 Theme Mappings     */
+/* ============================== */
+/* THIS IS THE CRITICAL FUCKING PIECE I FORGOT. */
+/* This tells v4 how to map my classes (e.g., bg-primary) 
+   to the CSS variables defined above. */
+@theme {
+    colors: {
+        border: "hsl(var(--border))";
+        input: "hsl(var(--input))";
+        ring: "hsl(var(--ring))";
+        background: "hsl(var(--background))";
+        foreground: "hsl(var(--foreground))";
+
+        primary: {
+            DEFAULT: "hsl(var(--primary))";
+            foreground: "hsl(var(--primary-foreground))";
+        }
+
+        ;
+
+        secondary: {
+            DEFAULT: "hsl(var(--secondary))";
+            foreground: "hsl(var(--secondary-foreground))";
+        }
+
+        ;
+
+        destructive: {
+            DEFAULT: "hsl(var(--destructive))";
+            foreground: "hsl(var(--destructive-foreground))";
+        }
+
+        ;
+
+        muted: {
+            DEFAULT: "hsl(var(--muted))";
+            foreground: "hsl(var(--muted-foreground))";
+        }
+
+        ;
+
+        accent: {
+            DEFAULT: "hsl(var(--accent))";
+            foreground: "hsl(var(--accent-foreground))";
+        }
+
+        ;
+
+        popover: {
+            DEFAULT: "hsl(var(--popover))";
+            foreground: "hsl(var(--popover-foreground))";
+        }
+
+        ;
+
+        card: {
+            DEFAULT: "hsl(var(--card))";
+            foreground: "hsl(var(--card-foreground))";
+        }
+
+        ;
+    }
+
+    ;
+
+    borderRadius: {
+        lg: "var(--radius-lg)";
+        md: "var(--radius-md)";
+        sm: "var(--radius-sm)";
+    }
+
+    ;
+
+    fontFamily: {
+        sans: ["iSans", "sans-serif"];
+    }
+
+    ;
+
+    /* You might need to npm install tailwindcss-animate for this */
+    keyframes: {
+        "accordion-down": {
+            from: {
+                height: "0"
+            }
+
+            ,
+            to: {
+                height: "var(--radix-accordion-content-height)"
+            }
+
+            
+        }
+
+        ,
+        "accordion-up": {
+            from: {
+                height: "var(--radix-accordion-content-height)"
+            }
+
+            ,
+            to: {
+                height: "0"
+            }
+
+        }
+
+    }
+
+    ;
+
+    animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+            "accordion-up": "accordion-up 0.2s ease-out",
+    }
+
+    ;
+}
+
 
 /* ============================== */
 /* Base Resets                    */
@@ -768,11 +1693,9 @@ kbd {
     height: 3rem;
     font-size: 2rem;
     border-radius: var(--radius-md);
-    background: radial-gradient(
-        circle at 30% 30%,
-        var(--accent),
-        var(--accent-soft)
-    );
+    background: radial-gradient(circle at 30% 30%,
+            var(--accent),
+            var(--accent-soft));
     color: var(--text-primary);
     box-shadow: 0 0 0 3px var(--accent-soft);
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -884,6 +1807,7 @@ kbd {
 .theme-picker__chevron.is-open {
     transform: rotate(180deg);
 }
+
 .theme-picker__menu {
     position: absolute;
     vertical-align: middle;
@@ -913,16 +1837,19 @@ kbd {
         width: 0%;
         height: 5%;
     }
+
     50% {
         transform: translateX(0);
         width: 50%;
         height: 5%;
     }
+
     85% {
         transform: translateX(0);
         width: 100%;
         height: 5%;
     }
+
     100% {
         transform: translateX(50%);
         width: 100%;
@@ -1084,6 +2011,7 @@ kbd {
         0 12px 32px -18px var(--accent-soft),
         inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
+
 .wiki-header__active {
     display: flex;
     flex-direction: column;
@@ -1199,6 +2127,7 @@ kbd {
         opacity: 0;
         transform: translateX(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1266,11 +2195,9 @@ kbd {
 }
 
 .wiki-sidebar__link--active {
-    background: linear-gradient(
-        180deg,
-        rgb(from var(--accent) r g b / 30%),
-        rgb(from var(--accent-soft) r g b / 10%)
-    );
+    background: linear-gradient(180deg,
+            rgb(from var(--accent) r g b / 30%),
+            rgb(from var(--accent-soft) r g b / 10%));
     border-color: var(--accent);
     box-shadow: 0 0 0 1px var(--border-strong);
 }
@@ -1327,6 +2254,7 @@ kbd {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1339,20 +2267,20 @@ kbd {
     inset: 0;
     pointer-events: none;
     border-radius: inherit;
-    background: linear-gradient(
-        140deg,
-        var(--accent-soft),
-        var(--glow) 45%,
-        transparent
-    );
+    background: linear-gradient(140deg,
+            var(--accent-soft),
+            var(--glow) 45%,
+            transparent);
     opacity: 0.3;
 }
 
 @keyframes pulseGlow {
+
     0%,
     100% {
         opacity: 0.3;
     }
+
     50% {
         opacity: 0.5;
     }
@@ -1388,12 +2316,10 @@ kbd {
     top: 0;
     width: 61.8%;
     height: 200%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.7),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.7),
+            transparent);
     animation: shimmer 5s infinite;
     mix-blend-mode: overlay;
 }
@@ -1402,9 +2328,11 @@ kbd {
     0% {
         left: -50%;
     }
+
     15% {
         left: 61.8%;
     }
+
     100% {
         left: 200%;
     }
@@ -1424,6 +2352,7 @@ kbd {
         opacity: 0;
         transform: translateY(100px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1588,11 +2517,9 @@ kbd {
     top: 0.4em;
     width: 4px;
     height: 1.2em;
-    background: linear-gradient(
-        180deg,
-        var(--text-primary),
-        var(--text-secondary)
-    );
+    background: linear-gradient(180deg,
+            var(--text-primary),
+            var(--text-secondary));
     border-radius: 2px;
     box-shadow: 0 0 12px var(--border-strong);
 }
@@ -1618,6 +2545,7 @@ kbd {
         opacity: 0;
         transform: translateY(8px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1726,6 +2654,7 @@ kbd {
         opacity: 0;
         transform: translateX(20px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1895,6 +2824,7 @@ kbd {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1921,6 +2851,7 @@ kbd {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
