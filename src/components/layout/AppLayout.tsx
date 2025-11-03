@@ -147,7 +147,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ navItems }) => {
         <Header />
         <div className="wiki-body">
           <SidebarNav 
-            navItems={navItems} 
+            navItems={navItems}
             searchTerm={searchTerm}
             onNavigate={handleNavigate}
           />
