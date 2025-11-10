@@ -1,17 +1,19 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./components/layout/AppLayout";
-import GuideSectionPage from "./components/GuideSectionPage";
-import sections from "./lib/sections";
+import HomePage from "./pages/HomePage";
+import CategoryPage from "./pages/CategoryPage";
+import ArticlePage from "./pages/ArticlePage";
 import { ThemeProvider } from "./lib/theme/ThemeContext";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <AppLayout sections={sections} />,
+    element: <AppLayout />,
     children: [
-      { index: true, element: <GuideSectionPage /> },
-      { path: "guide/:sectionId", element: <GuideSectionPage /> },
+      { index: true, element: <HomePage /> },
+      { path: ":categorySlug", element: <CategoryPage /> },
+      { path: ":categorySlug/:articleSlug", element: <ArticlePage /> },
     ],
   },
 ]);

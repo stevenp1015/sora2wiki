@@ -1,66 +1,126 @@
 import React, { useMemo } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useLayoutContext } from "./LayoutContext";
+import type { Category, Article } from "../../content/types";
 
-const filterSections = (term: string, title: string, summary: string) => {
-  if (!term.trim()) return true;
+interface FilterResult {
+  category: Category;
+  matchedArticles: Article[];
+}
+
+const filterContent = (
+  term: string,
+  categories: Category[]
+): FilterResult[] => {
+  if (!term.trim()) {
+    return categories.map((category) => ({
+      category,
+      matchedArticles: category.articles,
+    }));
+  }
+
   const lowered = term.toLowerCase();
-  return (
-    title.toLowerCase().includes(lowered) ||
-    summary.toLowerCase().includes(lowered)
-  );
+  return categories
+    .map((category) => {
+      const categoryMatches = category.category_title
+        .toLowerCase()
+        .includes(lowered);
+
+      const matchedArticles = category.articles.filter(
+        (article) =>
+          categoryMatches ||
+          article.article_title.toLowerCase().includes(lowered) ||
+          article.seo_description.toLowerCase().includes(lowered)
+      );
+
+      return { category, matchedArticles };
+    })
+    .filter((result) => result.matchedArticles.length > 0);
 };
 
 const SidebarNav: React.FC = () => {
-  const { sections, searchTerm } = useLayoutContext();
+  const { wikiContent, searchTerm, expandedCategories, toggleCategory } =
+    useLayoutContext();
   const location = useLocation();
 
-  const filteredSections = useMemo(
-    () =>
-      sections.filter((section) =>
-        filterSections(searchTerm, section.title, section.summary),
-      ),
-    [sections, searchTerm],
+  const filteredResults = useMemo(
+    () => filterContent(searchTerm, wikiContent.categories),
+    [searchTerm, wikiContent.categories]
   );
 
   return (
-    <aside className="wiki-sidebar" aria-label="Section navigation">
+    <aside className="wiki-sidebar" aria-label="Wiki navigation">
       <div className="wiki-sidebar__inner">
         <p className="wiki-sidebar__lead">
-          Explore the complete operating stack for Sora and advanced text-to-video
-          prompting. Filters update live as you type.
+          {wikiContent.wiki_title} - Navigate by category and article. Search
+          filters content in real-time.
         </p>
         <nav className="wiki-sidebar__nav">
-          {filteredSections.length === 0 ? (
-            <div className="wiki-sidebar__empty">No sections match that query.</div>
+          {filteredResults.length === 0 ? (
+            <div className="wiki-sidebar__empty">No content matches your search.</div>
           ) : (
-            <ul>
-              {filteredSections.map((section) => {
-                const isRoot = section.id === sections[0]?.id;
-                const path = isRoot ? "/" : `/guide/${section.id}`;
+            <ul className="wiki-sidebar__categories">
+              {filteredResults.map(({ category, matchedArticles }) => {
+                const isExpanded = expandedCategories.has(category.category_slug);
+                const hasContent = matchedArticles.some(
+                  (a) => a.content_markdown && a.content_markdown.length > 0
+                );
+
                 return (
-                  <li key={section.id}>
-                    <NavLink
-                      to={path}
-                      end={isRoot}
-                      className={({ isActive }) =>
-                        [
-                          "wiki-sidebar__link",
-                          isActive || location.pathname === path
-                            ? "wiki-sidebar__link--active"
-                            : "",
-                        ]
-                          .filter(Boolean)
-                          .join(" ")
-                      }
+                  <li key={category.category_slug} className="wiki-sidebar__category">
+                    <button
+                      onClick={() => toggleCategory(category.category_slug)}
+                      className="wiki-sidebar__category-toggle"
+                      aria-expanded={isExpanded}
                     >
-                      <span className="wiki-sidebar__link-title">
-                        {section.title}
+                      <span className="wiki-sidebar__category-icon">
+                        {isExpanded ? "▼" : "▶"}
                       </span>
-                      <span className="wiki-sidebar__link-summary">
-                        {section.summary}
+                      <span className="wiki-sidebar__category-title">
+                        {category.category_title}
                       </span>
-                    </NavLink>
+                      <span className="wiki-sidebar__category-count">
+                        ({matchedArticles.length})
+                      </span>
+                    </button>
+
+                    {isExpanded && (
+                      <ul className="wiki-sidebar__articles">
+                        {matchedArticles.map((article) => {
+                          const hasArticleContent =
+                            article.content_markdown &&
+                            article.content_markdown.length > 0;
+                          const path = `/${category.category_slug}/${article.article_slug}`;
+
+                          return (
+                            <li key={article.article_slug}>
+                              {hasArticleContent ? (
+                                <NavLink
+                                  to={path}
+                                  className={({ isActive }) =>
+                                    [
+                                      "wiki-sidebar__article-link",
+                                      isActive ? "wiki-sidebar__article-link--active" : "",
+                                    ]
+                                      .filter(Boolean)
+                                      .join(" ")
+                                  }
+                                >
+                                  {article.article_title}
+                                </NavLink>
+                              ) : (
+                                <span className="wiki-sidebar__article-placeholder">
+                                  {article.article_title}
+                                  <span className="wiki-sidebar__article-badge">
+                                    Soon
+                                  </span>
+                                </span>
+                              )}
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
                   </li>
                 );
               })}

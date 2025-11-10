@@ -1,12 +1,12 @@
 import React, { createContext, useContext } from "react";
-import { GuideSection } from "../../lib/sections";
+import type { WikiContent } from "../../content/types";
 
 type LayoutContextValue = {
-  sections: GuideSection[];
+  wikiContent: WikiContent;
   searchTerm: string;
   setSearchTerm: (value: string) => void;
-  setActiveSectionId: (id: string) => void;
-  activeSection?: GuideSection;
+  expandedCategories: Set<string>;
+  toggleCategory: (categorySlug: string) => void;
 };
 
 export const LayoutContext = createContext<LayoutContextValue | undefined>(

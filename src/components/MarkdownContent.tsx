@@ -72,9 +72,11 @@ const MarkdownContent: React.FC<MarkdownContentProps> = ({
           p: ({ node, ...props }) => (
             <p {...props} className="mdx-paragraph" />
           ),
-          ul: ({ node, ordered, ...props }) => (
-            <ul {...props} className="mdx-list" />
-          ),
+          ul: ({ node, ordered, ...props }: { node?: any; ordered?: boolean; [key: string]: any }) => {
+            // Remove the ordered prop since it's not a valid HTML attribute for ul
+            const { ordered: _, ...rest } = props;
+            return <ul {...rest} className="mdx-list" />;
+          },
           li: ({ node, ...props }) => (
             <li {...props} className="mdx-list-item" />
           ),
@@ -86,17 +88,25 @@ const MarkdownContent: React.FC<MarkdownContentProps> = ({
               <table {...props} />
             </div>
           ),
-          code: ({ inline, node, className, children, ...props }) => {
-            if (inline) {
+          code: ({ node, className, children, ...props }: {
+            node?: any;
+            className?: string;
+            children?: React.ReactNode;
+            inline?: boolean;
+            [key: string]: any;
+          }) => {
+            const { inline: isInline, ...rest } = props;
+            
+            if (isInline) {
               return (
-                <code {...props} className="mdx-inline-code">
+                <code {...rest} className="mdx-inline-code">
                   {children}
                 </code>
               );
             }
             return (
               <pre className="mdx-code-block">
-                <code {...props}>{children}</code>
+                <code {...rest}>{children}</code>
               </pre>
             );
           },
