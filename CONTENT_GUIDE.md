@@ -64,7 +64,7 @@ These are generated automatically by the content processor:
 - Must be unique within their category
 - Use lowercase letters, numbers, and hyphens only
 - Should be descriptive and SEO-friendly
-- Example: `"sora-2-free-vs-pro-plans"`
+- Example: `"sora-2-plus-vs-pro-plans"`
 
 ### Markdown Content
 

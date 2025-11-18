@@ -37,7 +37,7 @@ const AppLayout: React.FC = () => {
 
   return (
     <LayoutContext.Provider value={contextValue}>
-      <div className="wiki-shell ">
+      <div className="wiki-shell">
         <ScrollToTop />
         <Header />
         <div className="wiki-body">

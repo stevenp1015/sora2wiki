@@ -34,24 +34,13 @@ const ThemeToggle: React.FC = () => {
       onClick={toggleTheme}
       className="theme-toggle"
       aria-label="Toggle theme"
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "40px",
-        height: "40px",
-        background: "var(--surface)",
-        color: "var(--accent)",
-        cursor: "pointer",
-        transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
-      }}
       onMouseEnter={(e) => {
         e.currentTarget.style.transform = "scale(1.3) rotate(10deg)";
-        e.currentTarget.style.boxShadow = "0 4px 16px var(--accent-soft)";
+
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.transform = "scale(1) rotate(0deg)";
-        e.currentTarget.style.boxShadow = "none";
+
       }}
     >
       {isDark ? <Sun size={21} /> : <Moon size={21} />}

@@ -31,7 +31,7 @@ The Sora 2 app's user interface is intentionally familiar, closely mirroring the
  * Creation Tools: Tapping the central "+" icon initiates the creation process. Users can input a text prompt and select basic parameters like orientation (portrait or landscape) and duration.
  * Editing and Remixing: After generation, a suite of powerful editing tools becomes available. These tools are central to the app's social and collaborative nature :
    * Remix: Allows a user to take an existing video and alter it with a new prompt, enabling collaborative storytelling and trend participation.
-   * Re-cut: Trim or extend a video clip by providing a new prompt to generate additional frames.
+   * Stitch: Trim or extend a video clip by providing a new prompt to generate additional frames.
    * Blend: Fuse elements from two different video generations to create a new hybrid variant.
    * Loop: Create a seamless, infinitely looping video from a portion of a clip, ideal for backgrounds or social media posts.
 Your First Video: A Guided Walkthrough from Prompt to Generation
@@ -89,7 +89,7 @@ Core Generation Modes Explained: Text-to-Video, Image-to-Video, and Video-to-Vid
 Sora 2 offers several modes of creation, providing users with flexible workflows.
  * Text-to-Video (T2V): This is the primary mode of operation. The user provides a natural language text prompt describing a scene, and the model generates a complete video with audio from scratch.
  * Image-to-Video (I2V): Users can provide a static image as a starting point or visual reference. The model uses this image as an anchor for the first frame and then animates it based on an accompanying text prompt that describes the desired action. This provides greater control over composition, style, and character design.
- * Video-to-Video (V2V): This capability, which involves modifying or extending an existing video, is part of the model's potential but was restricted at launch for safety reasons. Features like "Re-cut" and "Blend" in the Sora app represent a controlled implementation of V2V functionality.
+ * Video-to-Video (V2V): This capability, which involves modifying or extending an existing video, is part of the model's potential but was restricted at launch for safety reasons. Features like "Stitch" and "Blend" in the Sora app represent a controlled implementation of V2V functionality.
 The 'Cameo' Feature: How Likeness Control and Consent Works
 The "Cameo" feature is a cornerstone of the Sora 2 social app, allowing users to create a digital likeness of themselves that can be inserted into any generated video. This feature is governed by a strict, consent-based system designed to give users end-to-end control over their digital identity.
 The system works as follows:
