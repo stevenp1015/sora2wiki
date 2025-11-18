@@ -4,35 +4,40 @@ import ScrollToTop from "../ScrollToTop";
 import Header from "./Header";
 import SidebarNav from "./SidebarNav";
 import { LayoutContext } from "./LayoutContext";
-import type { GuideSection } from "../../lib/sections";
+import { wikiContent } from "../../content";
 
-interface AppLayoutProps {
-  sections: GuideSection[];
-}
-
-const AppLayout: React.FC<AppLayoutProps> = ({ sections }) => {
+const AppLayout: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [activeSectionId, setActiveSectionId] = useState(sections[0]?.id ?? "");
-
-  const activeSection = useMemo(
-    () => sections.find((section) => section.id === activeSectionId),
-    [sections, activeSectionId],
+  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(
+    new Set()
   );
+
+  const toggleCategory = (categorySlug: string) => {
+    setExpandedCategories((prev) => {
+      const next = new Set(prev);
+      if (next.has(categorySlug)) {
+        next.delete(categorySlug);
+      } else {
+        next.add(categorySlug);
+      }
+      return next;
+    });
+  };
 
   const contextValue = useMemo(
     () => ({
-      sections,
+      wikiContent,
       searchTerm,
       setSearchTerm,
-      setActiveSectionId,
-      activeSection,
+      expandedCategories,
+      toggleCategory,
     }),
-    [sections, searchTerm, setSearchTerm, setActiveSectionId, activeSection],
+    [searchTerm, expandedCategories]
   );
 
   return (
     <LayoutContext.Provider value={contextValue}>
-      <div className="wiki-shell ">
+      <div className="wiki-shell">
         <ScrollToTop />
         <Header />
         <div className="wiki-body">

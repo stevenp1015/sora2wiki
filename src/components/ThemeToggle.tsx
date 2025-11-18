@@ -8,7 +8,7 @@ const ThemeToggle: React.FC = () => {
     // Check for saved theme preference or default to light
     const savedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
+      "(prefers-color-scheme: dark)",
     ).matches;
 
     if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
@@ -34,29 +34,16 @@ const ThemeToggle: React.FC = () => {
       onClick={toggleTheme}
       className="theme-toggle"
       aria-label="Toggle theme"
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "40px",
-        height: "40px",
-        borderRadius: "10px",
-        border: "1px solid var(--border-strong)",
-        background: "var(--surface)",
-        color: "var(--accent)",
-        cursor: "pointer",
-        transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
-      }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.transform = "scale(1.1) rotate(10deg)";
-        e.currentTarget.style.boxShadow = "0 4px 16px var(--accent-soft)";
+        e.currentTarget.style.transform = "scale(1.3) rotate(10deg)";
+
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.transform = "scale(1) rotate(0deg)";
-        e.currentTarget.style.boxShadow = "none";
+
       }}
     >
-      {isDark ? <Sun size={18} /> : <Moon size={18} />}
+      {isDark ? <Sun size={21} /> : <Moon size={21} />}
     </button>
   );
 };

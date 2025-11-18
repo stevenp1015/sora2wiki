@@ -14,8 +14,8 @@ import { VerticalThemeWipeToggle } from "../../lib/ui/vertical-theme-wipe-toggle
 const ThemeControls: React.FC = () => {
   return (
     <div className="theme-controls">
-      <ThemePaletteMenu />
       <VerticalThemeWipeToggle direction="top" className="theme-toggle" />
+      <ThemePaletteMenu />
     </div>
   );
 };
@@ -113,15 +113,6 @@ const ThemePaletteMenu: React.FC = () => {
                   />
                 ))}
               </span>
-              <span className="theme-picker__text">
-                <span className="theme-picker__option-name">{option.name}</span>
-                <span className="theme-picker__option-description">
-                  {option.description}
-                </span>
-              </span>
-              {option.id === themeId && (
-                <Check size={14} className="theme-picker__check" />
-              )}
             </button>
           ))}
         </div>
